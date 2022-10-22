@@ -384,7 +384,8 @@ bool CSampleExpert::LongOpened(void)
    bool res=false;
 //--- check for long position (BUY) possibility
    if(m_macd_current<0)
-      if(m_macd_current>m_signal_current && m_macd_previous<m_signal_previous)
+      if(m_macd_current>m_signal_current && m_macd_previous<m_signal_previous) 
+      //prahlada: conditions for opening here - better make a call for modules later
          if(MathAbs(m_macd_current)>(m_macd_open_level) && m_ema_current>m_ema_previous)
            {
             double price=m_symbol.Ask();
